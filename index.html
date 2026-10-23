@@ -11,25 +11,38 @@
     <meta property="og:title" content="Yutong Gou — Researcher and Open-source Developer" />
     <meta
       property="og:description"
-      content="Vector database research and open-source software: RaBitQ Library and SymphonyQG."
+      content="Vector database research and open-source software: RaBitQ Library, RemoteANN, and SymphonyQG."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://github.com/gouyt13.png?size=480" />
     <title>Yutong Gou</title>
-    <link rel="stylesheet" href="styles.css?v=20261008-sections" />
+    <link rel="stylesheet" href="styles.css?v=20261023-projects" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-name" href="#top">Yutong Gou</a>
+      <nav aria-label="Main navigation">
+        <a href="#research">About</a>
+        <a href="#news">News</a>
+        <a href="#projects">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#research-service">Service</a>
+      </nav>
+    </header>
 
     <main id="main">
       <section class="intro" id="top" aria-labelledby="intro-title">
         <div class="intro-copy">
           <h1 id="intro-title">Yutong Gou</h1>
-          <p class="role">PhD student<br />College of Computing and Data Science<br />Nanyang Technological University</p>
+          <p class="role">PhD student<br />College of Computing and Data Science<br /><strong>Nanyang Technological University</strong></p>
+          <p class="research-summary">I build efficient vector search systems through quantization and storage-aware indexing.</p>
 
           <div class="profile-links" aria-label="Academic profiles">
             <a href="https://scholar.google.com/citations?user=zOaG9jMAAAAJ&amp;hl=en">Google Scholar</a>
             <a href="https://github.com/gouyt13">GitHub</a>
+            <a href="https://www.linkedin.com/in/yutong-gou-472550285/">LinkedIn</a>
             <a href="https://dblp.org/pid/386/7522.html">DBLP</a>
             <a href="https://vectordb-ntu.github.io/people/">Research group</a>
           </div>
@@ -50,27 +63,85 @@
         <h2 id="about-title">About</h2>
           <p>
             I am a PhD student in the College of Computing and Data Science at
-            Nanyang Technological University, advised by
+            <strong>Nanyang Technological University</strong>, advised by
             <a href="https://www3.ntu.edu.sg/home/c.long/">Prof. Cheng Long</a>.
-            I received my bachelor’s degree from Tsinghua University.
+            I received my bachelor’s degree from <strong>Tsinghua University</strong>.
           </p>
           <p>
-            I study vector databases, with a focus on vector quantization
-            and approximate nearest-neighbor search.
+            I study <strong>vector databases</strong>, with a focus on
+            vector quantization and approximate nearest-neighbor search.
           </p>
       </section>
 
-          <section class="section featured-project" id="rabitq" aria-labelledby="rabitq-title">
-            <p class="eyebrow">Featured open-source project</p>
-            <h2 id="rabitq-title"><a href="https://github.com/VectorDB-NTU/RaBitQ-Library">RaBitQ Library</a></h2>
-            <p class="project-role"><strong>Lead developer &amp; primary maintainer</strong></p>
-            <p>Official RaBitQ library with an asymptotically optimal space–error trade-off, SIMD acceleration, and integrations in <a href="https://github.com/neuml/txtai/blob/master/docs/embeddings/configuration/ann.md">txtai</a> and <a href="https://github.com/VectorDB-NTU/RaBitQ-Library/blob/main/docs/docs/integrations/zvec.md">zvec</a>.</p>
+      <section class="section" id="news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ul class="news-list">
+          <li>
+            <time class="news-date" datetime="2026-10">2026.10</time>
+            <p>Our preprint, <a href="https://arxiv.org/abs/2610.25172"><strong>RemoteANN</strong>: A Native Vector Search Engine for Cloud Object Storage</a>, is now available on arXiv.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Selected projects</h2>
+        <article class="featured-project" id="rabitq" aria-labelledby="rabitq-title">
+          <div class="project-heading">
+            <p class="eyebrow">Featured open source</p>
+            <a class="project-banner" href="https://github.com/VectorDB-NTU/RaBitQ-Library" aria-label="RaBitQ Library on GitHub">
+              <img src="assets/rabitq-banner.svg" alt="RaBitQ Library banner with rabbit logo" width="1942" height="630" />
+            </a>
+            <h3 id="rabitq-title"><a href="https://github.com/VectorDB-NTU/RaBitQ-Library">RaBitQ Library</a></h3>
             <p class="technology">C++17 · Python · x86-64 / ARM64</p>
+          </div>
+          <div class="project-copy">
+            <p class="project-role"><strong>Lead developer &amp; primary maintainer</strong></p>
+            <p>Official RaBitQ library with an asymptotically optimal space–error trade-off, SIMD acceleration, and integrations in <a href="https://github.com/neuml/txtai/blob/master/docs/embeddings/configuration/ann.md"><strong>txtai</strong></a> and <a href="https://github.com/VectorDB-NTU/RaBitQ-Library/blob/main/docs/docs/integrations/zvec.md"><strong>zvec</strong></a>.</p>
             <p class="item-links">
-              <a class="project-link" href="https://github.com/VectorDB-NTU/RaBitQ-Library">Explore the library</a>
-              <a href="https://arxiv.org/abs/2409.09913">Read the paper &rsaquo;</a>
+              <a href="https://github.com/VectorDB-NTU/RaBitQ-Library">Code &rsaquo;</a>
+              <a href="https://arxiv.org/abs/2409.09913">Paper &rsaquo;</a>
+              <a href="https://vectordb-ntu.github.io/RaBitQ-Library/">Documentation &rsaquo;</a>
             </p>
-          </section>
+          </div>
+        </article>
+
+        <article class="featured-project" id="remoteann" aria-labelledby="remoteann-title">
+          <div class="project-heading">
+            <p class="eyebrow">Cloud vector search</p>
+            <a class="project-banner" href="https://arxiv.org/abs/2610.25172" aria-label="Read the RemoteANN paper">
+              <img src="assets/remoteann-overview.svg" alt="RemoteANN concept: IVF and RaBitQ on compute nodes guide selective reads from cloud object storage" width="720" height="280" />
+            </a>
+            <h3 id="remoteann-title"><a href="https://arxiv.org/abs/2610.25172">RemoteANN</a></h3>
+            <p class="technology">Cloud object storage · Vector search</p>
+          </div>
+          <div class="project-copy">
+            <p class="project-role">Preprint · 2026</p>
+            <p>A vector search engine designed for cloud object storage, combining IVF and RaBitQ with data reordering, selective reads, and request merging to reduce network transfers and storage requests.</p>
+            <p class="item-links">
+              <a href="https://arxiv.org/abs/2610.25172">Paper &rsaquo;</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="featured-project" id="symphonyqg" aria-labelledby="symphonyqg-title">
+          <div class="project-heading">
+            <p class="eyebrow">Quantization meets graph search</p>
+            <a class="project-banner" href="https://arxiv.org/abs/2411.12229" aria-label="Read the SymphonyQG paper">
+              <img src="assets/symphonyqg-overview.svg" alt="SymphonyQG concept: graph neighborhoods and quantized vectors support batched distance estimation with FastScan" width="720" height="280" />
+            </a>
+            <h3 id="symphonyqg-title"><a href="https://arxiv.org/abs/2411.12229">SymphonyQG</a></h3>
+            <p class="technology">Graph indexing · Vector quantization</p>
+          </div>
+          <div class="project-copy">
+            <p class="project-role"><strong>SIGMOD 2025</strong></p>
+            <p>Co-designs graph structure and quantized distance estimation for efficient nearest-neighbor search, aligning graph traversal with FastScan batches and avoiding a separate re-ranking step.</p>
+            <p class="item-links">
+              <a href="https://arxiv.org/abs/2411.12229">Paper &rsaquo;</a>
+              <a href="https://github.com/gouyt13/SymphonyQG">Code &rsaquo;</a>
+            </p>
+          </div>
+        </article>
+      </section>
 
       <section class="section" id="publications" aria-labelledby="publications-title">
         <div class="section-heading">
@@ -95,7 +166,7 @@
               <div>
                 <h3>SymphonyQG: Towards Symphonious Integration of Quantization and Graph for Approximate Nearest Neighbor Search</h3>
                 <p class="authors"><strong>Yutong Gou</strong>, Jianyang Gao, Yuexuan Xu, Cheng Long</p>
-                <p class="venue">Proceedings of the ACM on Management of Data · SIGMOD 2025</p>
+                <p class="venue">Proceedings of the ACM on Management of Data · <strong>SIGMOD 2025</strong></p>
                 <p class="item-links">
                   <a href="https://arxiv.org/abs/2411.12229">Paper</a>
                   <a href="https://github.com/gouyt13/SymphonyQG">Code</a>
@@ -107,7 +178,7 @@
               <div>
                 <h3>Practical and Asymptotically Optimal Quantization of High-Dimensional Vectors in Euclidean Space for Approximate Nearest Neighbor Search</h3>
                 <p class="authors">Jianyang Gao, <strong>Yutong Gou</strong>, Yuexuan Xu, Yongyi Yang, Cheng Long, Raymond Chi-Wing Wong</p>
-                <p class="venue">Proceedings of the ACM on Management of Data · SIGMOD 2025</p>
+                <p class="venue">Proceedings of the ACM on Management of Data · <strong>SIGMOD 2025</strong></p>
                 <p class="item-links">
                   <a href="https://arxiv.org/abs/2409.09913">Paper</a>
                   <a href="https://github.com/VectorDB-NTU/RaBitQ-Library">Code</a>
@@ -119,7 +190,7 @@
               <div>
                 <h3>iRangeGraph: Improvising Range-dedicated Graphs for Range-filtering Nearest Neighbor Search</h3>
                 <p class="authors">Yuexuan Xu, Jianyang Gao, <strong>Yutong Gou</strong>, Cheng Long, Christian S. Jensen</p>
-                <p class="venue">Proceedings of the ACM on Management of Data (2024) · SIGMOD 2025</p>
+                <p class="venue">Proceedings of the ACM on Management of Data (2024) · <strong>SIGMOD 2025</strong></p>
                 <p class="item-links">
                   <a href="https://arxiv.org/abs/2409.02571">Paper</a>
                   <a href="https://github.com/VectorDB-NTU/iRangeGraph">Code</a>
