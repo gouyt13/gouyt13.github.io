@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="280" viewBox="0 0 720 280" role="img" aria-labelledby="title desc">
+  <title id="title">SymphonyQG overview</title>
+  <desc id="desc">Conceptual diagram of graph neighborhoods paired with quantized vectors for batched distance estimation.</desc>
+  <rect width="720" height="280" rx="12" fill="#f0f7f5"/>
+  <g font-family="Arial, sans-serif">
+    <text x="36" y="45" fill="#276858" font-size="17" font-weight="600">SYMPHONYQG</text>
+    <g stroke="#76a99c" stroke-width="3">
+      <path d="m72 139 65-46 65 46-65 46-65-46h130m-65-46v92" fill="none"/>
+      <g fill="white"><circle cx="72" cy="139" r="12"/><circle cx="137" cy="93" r="12"/><circle cx="202" cy="139" r="12"/><circle cx="137" cy="185" r="12"/></g>
+    </g>
+    <text x="247" y="147" fill="#276858" font-size="32">+</text>
+    <g fill="#276858">
+      <rect x="294" y="100" width="25" height="25" rx="4"/><rect x="327" y="100" width="25" height="25" rx="4"/>
+      <rect x="294" y="133" width="25" height="25" rx="4" opacity="0.45"/><rect x="327" y="133" width="25" height="25" rx="4" opacity="0.7"/>
+      <rect x="294" y="166" width="25" height="25" rx="4"/><rect x="327" y="166" width="25" height="25" rx="4" opacity="0.45"/>
+    </g>
+    <path d="M378 139h48m-13-9 13 9-13 9" fill="none" stroke="#276858" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="447" y="97" width="237" height="88" rx="10" fill="#276858"/>
+    <text x="565" y="134" text-anchor="middle" fill="white" font-size="24" font-weight="600">FastScan</text>
+    <text x="565" y="164" text-anchor="middle" fill="#e2f0eb" font-size="18">Batched distances</text>
+    <text x="360" y="241" text-anchor="middle" fill="#276858" font-size="18">Graph structure + Quantized vectors</text>
+  </g>
+</svg>
