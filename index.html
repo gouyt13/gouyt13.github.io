@@ -16,7 +16,9 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://github.com/gouyt13.png?size=480" />
     <title>Yutong Gou</title>
-    <link rel="stylesheet" href="styles.css?v=20261023-projects" />
+    <link rel="preload" href="assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="styles.css?v=20261103-layout" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -26,7 +28,7 @@
       <nav aria-label="Main navigation">
         <a href="#research">About</a>
         <a href="#news">News</a>
-        <a href="#projects">Projects</a>
+        <a href="#projects">Software</a>
         <a href="#publications">Publications</a>
         <a href="#research-service">Service</a>
       </nav>
@@ -39,6 +41,7 @@
           <p class="role">PhD student<br />College of Computing and Data Science<br /><strong>Nanyang Technological University</strong></p>
           <p class="research-summary">I build efficient vector search systems through quantization and storage-aware indexing.</p>
 
+          <p class="email"><a href="mailto:yutong003@e.ntu.edu.sg">yutong003@e.ntu.edu.sg</a></p>
           <div class="profile-links" aria-label="Academic profiles">
             <a href="https://scholar.google.com/citations?user=zOaG9jMAAAAJ&amp;hl=en">Google Scholar</a>
             <a href="https://github.com/gouyt13">GitHub</a>
@@ -84,62 +87,21 @@
       </section>
 
       <section class="section" id="projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Selected projects</h2>
+        <h2 id="projects-title">Software</h2>
         <article class="featured-project" id="rabitq" aria-labelledby="rabitq-title">
-          <div class="project-heading">
-            <p class="eyebrow">Featured open source</p>
-            <a class="project-banner" href="https://github.com/VectorDB-NTU/RaBitQ-Library" aria-label="RaBitQ Library on GitHub">
-              <img src="assets/rabitq-banner.svg" alt="RaBitQ Library banner with rabbit logo" width="1942" height="630" />
-            </a>
-            <h3 id="rabitq-title"><a href="https://github.com/VectorDB-NTU/RaBitQ-Library">RaBitQ Library</a></h3>
-            <p class="technology">C++17 · Python · x86-64 / ARM64</p>
-          </div>
           <div class="project-copy">
-            <p class="project-role"><strong>Lead developer &amp; primary maintainer</strong></p>
+            <h3 id="rabitq-title"><a href="https://github.com/VectorDB-NTU/RaBitQ-Library">RaBitQ Library</a></h3>
+            <p class="project-role">Lead developer &amp; primary maintainer · C++17 · Python · x86-64 / ARM64</p>
             <p>Official RaBitQ library with an asymptotically optimal space–error trade-off, SIMD acceleration, and integrations in <a href="https://github.com/neuml/txtai/blob/master/docs/embeddings/configuration/ann.md"><strong>txtai</strong></a> and <a href="https://github.com/VectorDB-NTU/RaBitQ-Library/blob/main/docs/docs/integrations/zvec.md"><strong>zvec</strong></a>.</p>
             <p class="item-links">
-              <a href="https://github.com/VectorDB-NTU/RaBitQ-Library">Code &rsaquo;</a>
-              <a href="https://arxiv.org/abs/2409.09913">Paper &rsaquo;</a>
-              <a href="https://vectordb-ntu.github.io/RaBitQ-Library/">Documentation &rsaquo;</a>
+              <a href="https://github.com/VectorDB-NTU/RaBitQ-Library">Code</a>
+              <a href="https://arxiv.org/abs/2409.09913">Paper</a>
+              <a href="https://vectordb-ntu.github.io/RaBitQ-Library/">Documentation</a>
             </p>
           </div>
-        </article>
-
-        <article class="featured-project" id="remoteann" aria-labelledby="remoteann-title">
-          <div class="project-heading">
-            <p class="eyebrow">Cloud vector search</p>
-            <a class="project-banner" href="https://arxiv.org/abs/2610.25172" aria-label="Read the RemoteANN paper">
-              <img src="assets/remoteann-overview.svg" alt="RemoteANN concept: IVF and RaBitQ on compute nodes guide selective reads from cloud object storage" width="720" height="280" />
-            </a>
-            <h3 id="remoteann-title"><a href="https://arxiv.org/abs/2610.25172">RemoteANN</a></h3>
-            <p class="technology">Cloud object storage · Vector search</p>
-          </div>
-          <div class="project-copy">
-            <p class="project-role">Preprint · 2026</p>
-            <p>A vector search engine designed for cloud object storage, combining IVF and RaBitQ with data reordering, selective reads, and request merging to reduce network transfers and storage requests.</p>
-            <p class="item-links">
-              <a href="https://arxiv.org/abs/2610.25172">Paper &rsaquo;</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="featured-project" id="symphonyqg" aria-labelledby="symphonyqg-title">
-          <div class="project-heading">
-            <p class="eyebrow">Quantization meets graph search</p>
-            <a class="project-banner" href="https://arxiv.org/abs/2411.12229" aria-label="Read the SymphonyQG paper">
-              <img src="assets/symphonyqg-overview.svg" alt="SymphonyQG concept: graph neighborhoods and quantized vectors support batched distance estimation with FastScan" width="720" height="280" />
-            </a>
-            <h3 id="symphonyqg-title"><a href="https://arxiv.org/abs/2411.12229">SymphonyQG</a></h3>
-            <p class="technology">Graph indexing · Vector quantization</p>
-          </div>
-          <div class="project-copy">
-            <p class="project-role"><strong>SIGMOD 2025</strong></p>
-            <p>Co-designs graph structure and quantized distance estimation for efficient nearest-neighbor search, aligning graph traversal with FastScan batches and avoiding a separate re-ranking step.</p>
-            <p class="item-links">
-              <a href="https://arxiv.org/abs/2411.12229">Paper &rsaquo;</a>
-              <a href="https://github.com/gouyt13/SymphonyQG">Code &rsaquo;</a>
-            </p>
-          </div>
+          <a class="project-banner" href="https://github.com/VectorDB-NTU/RaBitQ-Library" aria-label="RaBitQ Library on GitHub">
+            <img src="assets/rabitq-banner.svg" alt="RaBitQ Library banner with rabbit logo" width="1942" height="630" />
+          </a>
         </article>
       </section>
 
@@ -149,6 +111,17 @@
         </div>
         <div class="section-content">
           <ol class="publication-list">
+            <li>
+              <p class="publication-year">2026</p>
+              <div>
+                <h3>RemoteANN: A Native Vector Search Engine for Cloud Object Storage</h3>
+                <p class="authors"><strong>Yutong Gou</strong>, Silu Huang, Yue Wang, Jianjun Chen, Cheng Long</p>
+                <p class="venue">Preprint</p>
+                <p class="item-links">
+                  <a href="https://arxiv.org/abs/2610.25172">Paper</a>
+                </p>
+              </div>
+            </li>
             <li>
               <p class="publication-year">2026</p>
               <div>
@@ -190,7 +163,7 @@
               <div>
                 <h3>iRangeGraph: Improvising Range-dedicated Graphs for Range-filtering Nearest Neighbor Search</h3>
                 <p class="authors">Yuexuan Xu, Jianyang Gao, <strong>Yutong Gou</strong>, Cheng Long, Christian S. Jensen</p>
-                <p class="venue">Proceedings of the ACM on Management of Data (2024) · <strong>SIGMOD 2025</strong></p>
+                <p class="venue">Proceedings of the ACM on Management of Data · <strong>SIGMOD 2025</strong></p>
                 <p class="item-links">
                   <a href="https://arxiv.org/abs/2409.02571">Paper</a>
                   <a href="https://github.com/VectorDB-NTU/iRangeGraph">Code</a>
@@ -215,12 +188,12 @@
 
 
       <section class="section" id="research-service" aria-labelledby="research-service-title">
-        <h2 id="research-service-title">Research Service</h2>
-        <h3>External Reviewer</h3>
+        <h2 id="research-service-title">Research service</h2>
+        <h3>External reviewer</h3>
         <ul class="service-list">
-          <li><span class="service-year">2027:</span> WSDM, VLDB, SIGMOD</li>
-          <li><span class="service-year">2026:</span> VLDB, ICDE, SIGMOD</li>
-          <li><span class="service-year">2025:</span> VLDB, ICDE, SIGMOD, SSTD</li>
+          <li><span class="service-year">2027</span> WSDM, VLDB, SIGMOD</li>
+          <li><span class="service-year">2026</span> VLDB, ICDE, SIGMOD</li>
+          <li><span class="service-year">2025</span> VLDB, ICDE, SIGMOD, SSTD</li>
         </ul>
       </section>
     </main>
