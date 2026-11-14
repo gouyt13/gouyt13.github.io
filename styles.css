@@ -93,6 +93,7 @@ h3 { font-size: 1.125rem; font-weight: 600; line-height: 1.45; }
 .authors { color: var(--muted); }
 .authors strong { color: var(--text); font-weight: 600; }
 .venue { color: var(--muted); font-size: 0.9375rem; }
+.publication-list .summary { margin: 0.2rem 0; font-size: 0.9375rem; }
 .item-links { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; margin: 0.25rem 0 0; font-size: 1rem; }
 .item-links a { padding-block: 0.15rem; }
 .publication-list .venue, .publication-list .item-links { display: inline; }
