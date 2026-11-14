@@ -15,11 +15,15 @@
 
 :root {
   color-scheme: light;
-  --background: #ffffff;
-  --text: #252a30;
-  --muted: #68717d;
-  --line: #e3e7eb;
-  --accent: #245d91;
+  --background: #f8f8fa;
+  --text: #1f1e24;
+  --muted: #696970;
+  --line: #e2e2e8;
+  --accent: #2c50a0;
+  --ink: #1c1b21;
+  --on-ink: #f4f3f6;
+  --on-ink-muted: #a9a8b0;
+  --ink-line: #34333b;
   --content-width: 740px;
   --sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -37,7 +41,7 @@ body {
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
 }
-::selection { color: var(--text); background: #d6e8fa; }
+::selection { color: var(--text); background: #dbe3f6; }
 a { color: var(--accent); text-decoration: none; text-underline-offset: 3px; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
@@ -51,28 +55,31 @@ strong { font-weight: 600; }
   top: 1rem;
   left: 1rem;
   padding: 0.5rem 0.75rem;
-  color: var(--background);
-  background: var(--text);
+  color: var(--text);
+  background: var(--background);
   transform: translateY(-200%);
 }
 .skip-link:focus { transform: none; }
 .site-header, main, footer { width: min(calc(100% - 4rem), var(--content-width)); margin-inline: auto; }
-.site-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem 2rem; padding-block: 1.1rem; border-bottom: 1px solid var(--line); }
-.site-name { color: var(--text); font-size: 1rem; font-weight: 650; letter-spacing: -0.02em; }
+/* Dark band behind the navigation and intro, extended to the viewport edges. */
+.site-header, .intro { color: var(--on-ink); background: var(--ink); box-shadow: 0 0 0 100vmax var(--ink); clip-path: inset(0 -100vmax); }
+.site-header a:focus-visible, .intro a:focus-visible { outline-color: var(--on-ink); }
+.site-header { display: flex; justify-content: flex-end; padding-block: 1.1rem; border-bottom: 1px solid var(--ink-line); }
 .site-header nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; font-size: 0.9375rem; }
-.site-header nav a { padding-block: 0.35rem; color: var(--muted); }
-.site-header nav a:hover { color: var(--accent); }
-main { padding-top: 2.5rem; }
-.intro { display: flex; align-items: flex-start; gap: 2rem; }
+.site-header nav a { padding-block: 0.35rem; color: var(--on-ink-muted); }
+.site-header nav a:hover { color: #fff; }
+.intro { display: flex; align-items: flex-start; gap: 2rem; padding-block: 2.5rem 2.75rem; }
 .intro-copy { flex: 1; min-width: 0; }
 h1, h2, h3 { font-family: var(--serif); }
 h1 { margin: 0 0 0.5rem; font-size: clamp(2rem, 4vw, 2.65rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.02em; }
-.role { margin: 0; color: var(--muted); line-height: 1.6; }
+.role { margin: 0; color: var(--on-ink-muted); }
 .research-summary { max-width: 52ch; margin: 0.8rem 0 0; font-size: 1rem; }
 .email { margin: 0.8rem 0 0; font-size: 0.9375rem; }
 .profile-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.2rem; margin-top: 0.2rem; font-size: 0.9375rem; }
 .profile-links a { padding-block: 0.25rem; }
-.portrait { flex: 0 0 128px; order: -1; margin-top: 0.4rem; }
+.email a, .profile-links a { color: inherit; text-decoration: underline; text-decoration-color: #5a5962; text-decoration-thickness: 1px; }
+.email a:hover, .profile-links a:hover { color: #fff; text-decoration-color: #f0353d; }
+.portrait { flex: 0 0 160px; order: -1; margin-top: 0.4rem; }
 .avatar { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 8px; }
 
 .section { margin-top: 2.5rem; }
@@ -114,14 +121,13 @@ footer p { margin: 0; }
 .project-banner img { display: block; width: 100%; height: auto; border-radius: 6px; }
 @media (max-width: 600px) {
   .site-header, main, footer { width: calc(100% - 2rem); }
-  .site-header { align-items: flex-start; flex-direction: column; gap: 0.5rem; padding-block: 1rem; }
+  .site-header { justify-content: flex-start; padding-block: 1rem; }
   .site-header nav { gap: 0.25rem 1.1rem; font-size: 0.875rem; }
-  main { padding-top: 2rem; }
   .section { margin-top: 2.25rem; }
   h2 { font-size: 1.3rem; }
   .featured-project { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   .project-banner { max-width: 200px; }
-  .intro { align-items: flex-start; gap: 1.25rem; }
+  .intro { gap: 1.25rem; padding-block: 1.75rem 2rem; }
   .portrait { flex-basis: 96px; }
   h1 { font-size: 1.75rem; }
   .role, .profile-links { font-size: 0.9375rem; }
