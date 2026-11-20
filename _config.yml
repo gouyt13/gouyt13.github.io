@@ -1,0 +1,24 @@
+title: Yutong Gou
+url: https://gouyt13.github.io
+theme: null
+
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+# Serve Markdown files without front matter (font licences) as plain files.
+optional_front_matter:
+  enabled: false
+
+exclude:
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

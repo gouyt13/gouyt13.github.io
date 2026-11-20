@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ page.description | default: 'Notes on vector search systems by Yutong Gou.' | escape }}" />
+    <meta name="theme-color" content="#1c1b21" />
+    <meta property="og:title" content="{{ page.title | escape }}" />
+    <meta property="og:description" content="{{ page.description | default: 'Notes on vector search systems by Yutong Gou.' | escape }}" />
+    <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}" />
+    <meta property="og:image" content="https://github.com/gouyt13.png?size=480" />
+    <title>{{ page.title | escape }} — Yutong Gou</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="preload" href="/assets/fonts/source-serif-4.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/source-sans-3.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v={{ site.time | date: '%Y%m%d%H%M' }}" />
+    <link rel="stylesheet" href="/blog.css?v={{ site.time | date: '%Y%m%d%H%M' }}" />
+    {%- if page.math %}
+    <link rel="stylesheet" href="/assets/katex/katex.min.css" />
+    <script defer src="/assets/katex/katex.min.js"></script>
+    <script defer src="/assets/katex/auto-render.min.js" onload="renderMathInElement(document.querySelector('.post-body'));"></script>
+    {%- endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-name" href="/">Yutong Gou</a>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </header>
+
+    <main id="main">
+{{ content }}
+    </main>
+
+    <footer>
+      <p>© {{ site.time | date: '%Y' }} Yutong Gou</p>
+      <p>Nanyang Technological University</p>
+    </footer>
+  </body>
+</html>

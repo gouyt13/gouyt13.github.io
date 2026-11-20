@@ -1,0 +1,23 @@
+---
+layout: default
+title: Blog
+description: Notes on vector search systems by Yutong Gou.
+---
+      <h1>Blog</h1>
+      {%- if site.posts.size > 0 %}
+      <ul class="post-list">
+        {%- for post in site.posts %}
+        <li>
+          <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          <div>
+            <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
+            {%- if post.description %}
+            <p>{{ post.description | escape }}</p>
+            {%- endif %}
+          </div>
+        </li>
+        {%- endfor %}
+      </ul>
+      {%- else %}
+      <p class="post-empty">No posts yet.</p>
+      {%- endif %}
